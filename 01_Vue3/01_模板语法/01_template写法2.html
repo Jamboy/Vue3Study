@@ -1,0 +1,58 @@
+<!--
+ * @Description: 
+ * @Author: Jamboy
+ * @Date: 2022-02-09 15:40:54
+ * @LastEditTime: 2022-02-09 15:47:13
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <h2>发发1发</h2>
+  </div>
+
+  <script type="x-template" id="jam">
+    <div>
+      <h2>{{msg}}</h2>
+      <h2>{{counter}}</h2>
+      <button @click='increment'>+1</button>
+      <button @click='decrement'>-1</button>
+    </div>
+  </script>
+  <script src="/js/vue@3.29.js"></script>
+  <script>
+    document.querySelector("#why")
+    const app = Vue.createApp({
+      template: '#jam',
+      data () {
+        return {
+          msg: 'hello world',
+          counter: 1
+        }
+      },
+      methods: {
+        increment () {
+          this.counter++
+        },
+        decrement () {
+          this.counter--
+        }
+      }
+    })
+
+    app.mount("#app")
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!--
+ * @Description: 
+ * @Author: Jamboy
+ * @Date: 2022-02-09 16:47:38
+ * @LastEditTime: 2022-02-09 16:51:02
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <h2>{{msg}}</h2>
+    <div>{{1+1}}</div>
+    <div>{{1 > 0 ? '大于' : '小于'}}</div>
+    <!-- 2.是一个表达式 -->
+    <h2>{{counter * 10}}</h2>
+    <h2>{{ msg.split(" ").reverse().join(" ") }}</h2>
+    <!-- 3.也可以调用函数 -->
+    <!-- 可以使用computed(计算属性) -->
+    <h2>{{getReverseMessage()}}</h2>
+    <!-- 4.三元运算符 -->
+    <h2>{{ isShow ? "哈哈哈": "" }}</h2>
+    <button @click="toggle">切换</button>
+
+    <!-- 错误用法 -->
+    <!-- var name = "abc" -> 赋值语句 -->
+    <!-- <h2>{{var name = "abc"}}</h2>
+    <h2>{{ if(isShow) {  return "哈哈哈" } }}</h2> -->
+  </div>
+
+  <script src="/js/vue@3.29.js"></script>
+  <script>
+    const app = Vue.createApp({
+      data () {
+        return {
+          msg: 'hello world',
+          counter: 100,
+          isShow: true
+        }
+      },
+      methods: {
+        getReverseMessage () {
+          return this.msg.split(" ").reverse().join(" ")
+        },
+        toggle () {
+          this.isShow = !this.isShow
+        }
+      }
+    })
+
+    app.mount("#app")
+  </script>
+
+</body>
+
+</html>
