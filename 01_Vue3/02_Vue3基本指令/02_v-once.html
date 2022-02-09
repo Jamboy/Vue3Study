@@ -1,0 +1,40 @@
+<!--
+ * @Description: 
+ * @Author: Jamboy
+ * @Date: 2022-02-09 17:17:04
+ * @LastEditTime: 2022-02-09 17:18:05
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <h2>{{counter}}</h2>
+    <h2 v-once>{{counter}}</h2>
+    <button @click="counter++">++1</button>
+  </div>
+
+  <script src="/js/vue@3.29.js"></script>
+  <script>
+    const app = Vue.createApp({
+      data () {
+        return {
+          counter: 1,
+        }
+      },
+    })
+
+    app.mount("#app")
+  </script>
+
+</body>
+
+</html>
