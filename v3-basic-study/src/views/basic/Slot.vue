@@ -3,7 +3,7 @@
  * @FilePath: \Vue3Study\v3-basic-study\src\views\basic\Slot.vue
  * @Author: Jamboy
  * @Date: 2022-10-09 15:06:26
- * @LastEditTime: 2022-11-25 14:09:24
+ * @LastEditTime: 2022-11-25 14:17:30
 -->
 <script lang="ts" setup>
 import Child from './comp/Child.vue';
