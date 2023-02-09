@@ -1,3 +1,10 @@
+<!--
+ * @Description: 
+ * @FilePath: \Vue3Study\v3-basic-study\src\views\basic\Responsive.vue
+ * @Author: Jamboy
+ * @Date: 2023-02-07 09:33:53
+ * @LastEditTime: 2023-02-09 15:26:07
+-->
 <script lang="ts" setup>
 // vue2 - 响应式原理
 const reactiveVue2 = (obj: object, key: string, value: any) => {
@@ -76,6 +83,7 @@ function trigger(target: object, key: any) {
     const dep = depsMap.get(key);
     if (dep) {
       dep.forEach((effect) => effect());
+      // test
     }
   }
 }
