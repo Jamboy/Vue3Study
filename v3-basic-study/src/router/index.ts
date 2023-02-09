@@ -2,7 +2,7 @@
  * @Description: routes
  * @Author: Jamboy
  * @Date: 2022-08-24 09:49:11
- * @LastEditTime: 2022-10-09 15:06:07
+ * @LastEditTime: 2023-02-07 09:34:27
  */
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
@@ -47,6 +47,11 @@ const router = createRouter({
       path: '/slot',
       name: 'Slot',
       component: () => import('../views/basic/Slot.vue'),
+    },
+    {
+      path: '/responsive',
+      name: 'Responsive',
+      component: () => import('../views/basic/Responsive.vue'),
     },
   ],
 });

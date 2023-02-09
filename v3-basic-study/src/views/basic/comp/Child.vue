@@ -15,7 +15,7 @@ const style = useCssModule();
 
 const content = `<p class="${style.title}">
   111
-      <span class="${style.content}">Hello World! —— from v-html</span>
+      <span class="${style.content}">Hello 冲突 World! —— from v-html</span>
     </p>`;
 
 console.log('style: ', style);

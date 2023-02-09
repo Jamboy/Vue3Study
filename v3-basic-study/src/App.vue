@@ -19,6 +19,7 @@ import { RouterLink, RouterView } from 'vue-router';
         <RouterLink to="/dataWatch">数据监听</RouterLink>
         <RouterLink to="/cusDirective">自定义指令</RouterLink>
         <RouterLink to="/slot">slot</RouterLink>
+        <RouterLink to="/responsive">Responsive</RouterLink>
       </nav>
     </div>
   </header>
